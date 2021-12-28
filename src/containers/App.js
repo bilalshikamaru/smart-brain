@@ -62,7 +62,7 @@ class App extends Component{
 
   onPictureSubmit=()=>{
     this.setState({urlImage:this.state.urlImage}) 
-    fetch('https://git.heroku.com/frozen-eyrie-67357.git/imageUrl', {
+    fetch('https://hidden-tor-82334.herokuapp.com//imageUrl', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -72,7 +72,7 @@ class App extends Component{
     .then(response => response.json())
     .then(response => {
         if(response){
-          fetch('https://git.heroku.com/frozen-eyrie-67357.git/image', {
+          fetch('https://hidden-tor-82334.herokuapp.com//image', {
               method: 'put',
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify({
