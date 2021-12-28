@@ -20,9 +20,9 @@ const opts={
       },
       links: {
         color: "#ffffff",
-        distance: 150,
+        distance: 125,
         enable: true,
-        opacity: 0.5,
+        opacity: 0.25,
         width: 1,
       },
       collisions: {
@@ -33,11 +33,11 @@ const opts={
         enable: true,
         outMode: "bounce",
         random: false,
-        speed: 1,
+        speed: 0.25,
         straight: false,
       },
       opacity: {
-        value: 0.5,
+        value: 0.25,
       },         
     },
   }
