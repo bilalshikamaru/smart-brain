@@ -8,7 +8,7 @@ import Rank from '../components/Rank/Rank'
 import ImageLinkForm from '../components/ImageLinkForm/ImageLinkForm'
 import Particles from '../components/Particles/Particles'
 import FaceRecongnition from '../components/FaceRecongnition/FaceRecongnition'
-import Clarifai from 'clarifai'
+
 
 
 const initialState = {
@@ -62,7 +62,7 @@ class App extends Component{
 
   onPictureSubmit=()=>{
     this.setState({urlImage:this.state.urlImage}) 
-    fetch('http://localhost:3001/imageUrl', {
+    fetch('https://git.heroku.com/frozen-eyrie-67357.git/imageUrl', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -72,7 +72,7 @@ class App extends Component{
     .then(response => response.json())
     .then(response => {
         if(response){
-          fetch('http://localhost:3001/image', {
+          fetch('https://git.heroku.com/frozen-eyrie-67357.git/image', {
               method: 'put',
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify({
